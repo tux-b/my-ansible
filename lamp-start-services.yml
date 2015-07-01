@@ -1,0 +1,9 @@
+---
+- hosts: webservers
+  tasks:
+  - name: Start HTTPD service and chkconfig it on
+    service: name=httpd state=started enabled=yes
+    
+  - name: Start MySQL service and chkconfig it on
+    service: name=mysqld state=started enabled=yes
+     

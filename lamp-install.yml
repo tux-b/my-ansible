@@ -1,0 +1,11 @@
+---
+- hosts: webservers
+  tasks:
+  - name: Install latest HTTPD Webserver
+    yum: name=httpd state=latest
+
+  - name: Install latest PHP
+    yum: name=php state=latest
+
+  - name: Install latest MySQL-Server
+    yum: name=mysql-server state=latest
