@@ -1,0 +1,10 @@
+---
+- hosts: 172.16.20.47
+  tasks:
+  - name: stop and remove apache service
+    service: name=httpd enabled=no state=stopped
+
+  - name: ensure apache uninstalled
+    yum: name=httpd state=absent
+    yum: name=httpd-tools state=absent
+
